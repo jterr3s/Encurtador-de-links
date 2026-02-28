@@ -1,0 +1,25 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <h1>Insira um link para ser encurtado</h1>
+        <form action="/encurtar" method="POST">
+            <label>Link: </label><br>
+            <input type="url" name="url_longa" placeholder="Cole aqui o seu link"><br>
+            <button type="submit">Encurtar<br>
+        </form>
+    </div>
+        <div>
+        <h1>Link encurtado: </h1>
+        {% if link_pronto %}
+        <p>Sucesso! Seu link: <strong>{{ link_pronto }}</strong></p>
+        {% endif %}
+    </div>
+</body>
+</html>
